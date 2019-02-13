@@ -1,0 +1,26 @@
+﻿@model DataInputViewModel
+@{
+    ViewData["Title"] = "View";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h1>Hi iam enter page @Model.Title</h1>
+<<form class="box" asp-action="enter" asp-controller="account" method="post">
+    <h1>Login</h1>
+    <span asp-validation-for="Login"></span>
+    <input asp-for="Login" placeholder="Login" />
+    <span asp-validation-for="Password"></span>
+    <input asp-for="Password" type="password" placeholder="Password" />
+
+    <input type="submit" value="Login" />
+    <a style="color:whitesmoke; text-decoration:none" href="#">Registration</a>
+
+
+</form>
+
+
+
+
+@section scripts {
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validation.unobtrusive/3.2.6/jquery.validate.unobtrusive.min.js"></script>
+}
